@@ -9,7 +9,7 @@ using Android.OS;
 
 namespace gestionAutolavado.Droid
 {
-    [Activity(Label = "Administra tu Autolavado", Icon = "@drawable/icono", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "RoofGarden", Icon = "@drawable/icono", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)

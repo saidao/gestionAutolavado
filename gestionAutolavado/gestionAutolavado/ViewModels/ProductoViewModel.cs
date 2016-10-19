@@ -20,7 +20,8 @@ namespace gestionAutolavado.ViewModels
         public bool Favorito { get; set; }
         [OneToMany]
         public List<ServicioViewModel> Servicios { get; set; }
-        public override string ToString() { return string.Format("{0} {1} {2} {3}", this.IdProducto, this.FechaRegistro, this.Nombre, this.Descripcion); }
+        //public override string ToString() { return string.Format("{0} {1} {2} {3}", this.IdProducto, this.FechaRegistro, this.Nombre, this.Descripcion); }
+
 
     }
 }

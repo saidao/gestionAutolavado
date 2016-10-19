@@ -42,8 +42,11 @@
     <Compile Include="Pages\ClientesPage.xaml.cs">
       <DependentUpon>ClientesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\GastosIngresoPage.xaml.cs">
-      <DependentUpon>GastosIngresoPage.xaml</DependentUpon>
+    <Compile Include="Pages\ConfiguracionPage.xaml.cs">
+      <DependentUpon>ConfiguracionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\GastosIngresosPage.xaml.cs">
+      <DependentUpon>GastosIngresosPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\LavadoresPage.xaml.cs">
       <DependentUpon>LavadoresPage.xaml</DependentUpon>
@@ -57,13 +60,23 @@
     <Compile Include="Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\NuevoClientePage.xaml.cs">
+      <DependentUpon>NuevoClientePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NuevoServicioPage.xaml.cs">
+      <DependentUpon>NuevoServicioPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\ReportesPage.xaml.cs">
       <DependentUpon>ReportesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ServiciosPage.xaml.cs">
+      <DependentUpon>ServiciosPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\VehiculosPage.xaml.cs">
       <DependentUpon>VehiculosPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\NavigationService.cs" />
     <Compile Include="ViewModels\ClienteViewModel.cs" />
     <Compile Include="ViewModels\LavadorViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -77,6 +90,18 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="GalaSoft.MvvmLight, Version=5.3.0.19026, Culture=neutral, PublicKeyToken=e7570ab207bcb616, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmLightLibs.5.3.0.0\lib\portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10\GalaSoft.MvvmLight.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="GalaSoft.MvvmLight.Extras, Version=5.3.0.19032, Culture=neutral, PublicKeyToken=669f0b5e8f868abf, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\MvvmLightLibs.5.3.0.0\lib\portable-net45+wp8+wpa81+netcore45+monoandroid1+xamarin.ios10\GalaSoft.MvvmLight.Extras.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
@@ -145,13 +170,37 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\GastosIngresoPage.xaml">
+    <EmbeddedResource Include="Pages\GastosIngresosPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Pages\ReportesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\NuevoServicioPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\NuevoClientePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ServiciosPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ConfiguracionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

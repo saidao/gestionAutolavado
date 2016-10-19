@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
+using gestionAutolavado.Pages;
 using Xamarin.Forms;
 
 namespace gestionAutolavado
 {
     public partial class App : Application
     {
-        public static object Navigator { get; internal set; }
+        public static NavigationPage Navigator { get; internal set; }
+        public static MasterPage Master { get; internal set; }
 
         public App()
         {

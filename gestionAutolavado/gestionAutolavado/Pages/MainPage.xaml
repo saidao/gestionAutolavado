@@ -2,9 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="gestionAutolavado.Pages.MainPage"
-             Title="Servicios"
+             Title="Información del día"
              BackgroundColor="{StaticResource BackgroundColor1}"
              BindingContext="{Binding Main, Source={StaticResource Locator}}">
+  <ContentPage.ToolbarItems>
+    <ToolbarItem Icon="agregar.png" Command="{Binding GoToCommand}" CommandParameter="NuevoServicioPage"/>
+  </ContentPage.ToolbarItems>
   <ListView
     ItemsSource="{Binding Servicios}"
     HasUnevenRows="True">
@@ -33,27 +36,27 @@
                 Text="{Binding FechaRegistro, StringFormat='{0:dd/mm/yyyy HH:mm}'}"/>
               <Label
                 VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
+                TextColor="{StaticResource AccentColor1}"
                 Text="{Binding IdCliente}"/>
               <Label
                 VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
+                TextColor="{StaticResource AccentColor1}"
                 Text="{Binding IdVehiculo}"/>
               <Label
                 VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
+                TextColor="{StaticResource AccentColor1}"
                 Text="{Binding IdProducto}"/>
               <Label
                 VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
+                TextColor="{StaticResource AccentColor1}"
                 Text="{Binding IdLavador}"/>
               <Label
                 VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
+                TextColor="{StaticResource AccentColor1}"
                 Text="{Binding Precio}"/>
               <Label
                 VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
+                TextColor="{StaticResource AccentColor1}"
                 Text="{Binding Comentarios}"/>
             </StackLayout>
           </Grid>
