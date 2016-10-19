@@ -1,21 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="gestionAutolavado.Pages.MainPage"
-             Title="Información del día"
-             BackgroundColor="{StaticResource BackgroundColor1}">
-  <Label Text="Pagina principal" VerticalOptions="Center" HorizontalOptions="Center" />
-</ContentPage>
-
-<!--?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="gestionAutolavado.Pages.MainPage"
-             Title="Información del día"
+             x:Class="gestionAutolavado.Pages.ListOfOrdersPage"
+             Title="Ventas realizadas"
              BackgroundColor="{StaticResource BackgroundColor1}"
              BindingContext="{Binding Sale, Source={StaticResource Locator}}">
   <ContentPage.ToolbarItems>
-    <ToolbarItem Icon="agregar.png" Command="{Binding GoToCommand}" CommandParameter="NewSalePage"/>
+    <ToolbarItem Icon="agregar.png" Command="{Binding GoToCommand}" CommandParameter="NewOrderPage"/>
   </ContentPage.ToolbarItems>
   <ListView
     ItemsSource="{Binding Sales}"
@@ -44,7 +35,6 @@
                 TextColor="{StaticResource FontColor}"
                 Text="{Binding CreationDate, StringFormat='{0:dd/mm/yyyy HH:mm}'}"/>
               <Label
-                FontAttributes="Bold"
                 VerticalOptions="Center"
                 TextColor="{StaticResource FontColor}"
                 Text="{Binding Price}"/>
@@ -58,4 +48,4 @@
       </DataTemplate>
     </ListView.ItemTemplate>
   </ListView>
-</ContentPage>-->
+</ContentPage>

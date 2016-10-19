@@ -8,9 +8,9 @@ using Xamarin.Forms;
 
 namespace gestionAutolavado.Pages
 {
-    public partial class LavadoresPage : ContentPage
+    public partial class NewOrderPage : ContentPage
     {
-        public LavadoresPage()
+        public NewOrderPage()
         {
             InitializeComponent();
         }

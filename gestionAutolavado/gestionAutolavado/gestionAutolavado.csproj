@@ -39,17 +39,20 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Infrastructure\InstanceLocator.cs" />
-    <Compile Include="Pages\ClientesPage.xaml.cs">
-      <DependentUpon>ClientesPage.xaml</DependentUpon>
+    <Compile Include="Pages\ListOfClientsPage.xaml.cs">
+      <DependentUpon>ListOfClientsPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ConfiguracionPage.xaml.cs">
-      <DependentUpon>ConfiguracionPage.xaml</DependentUpon>
+    <Compile Include="Pages\GenericConfigurationPage.xaml.cs">
+      <DependentUpon>GenericConfigurationPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\GastosIngresosPage.xaml.cs">
-      <DependentUpon>GastosIngresosPage.xaml</DependentUpon>
+    <Compile Include="Pages\GenericIncomeExpenses.xaml.cs">
+      <DependentUpon>GenericIncomeExpenses.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\LavadoresPage.xaml.cs">
-      <DependentUpon>LavadoresPage.xaml</DependentUpon>
+    <Compile Include="Pages\ListOfEmployeesPage.xaml.cs">
+      <DependentUpon>ListOfEmployeesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListOfOrdersPage.xaml.cs">
+      <DependentUpon>ListOfOrdersPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -60,30 +63,44 @@
     <Compile Include="Pages\MenuPage.xaml.cs">
       <DependentUpon>MenuPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\NuevoClientePage.xaml.cs">
-      <DependentUpon>NuevoClientePage.xaml</DependentUpon>
+    <Compile Include="Pages\NewClientPage.xaml.cs">
+      <DependentUpon>NewClientPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\NuevoServicioPage.xaml.cs">
-      <DependentUpon>NuevoServicioPage.xaml</DependentUpon>
+    <Compile Include="Pages\NewEmployeePage.xaml.cs">
+      <DependentUpon>NewEmployeePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ReportesPage.xaml.cs">
-      <DependentUpon>ReportesPage.xaml</DependentUpon>
+    <Compile Include="Pages\NewProductServicePage.xaml.cs">
+      <DependentUpon>NewProductServicePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\ServiciosPage.xaml.cs">
-      <DependentUpon>ServiciosPage.xaml</DependentUpon>
+    <Compile Include="Pages\NewPropertyPage.xaml.cs">
+      <DependentUpon>NewPropertyPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\VehiculosPage.xaml.cs">
-      <DependentUpon>VehiculosPage.xaml</DependentUpon>
+    <Compile Include="Pages\GenericReportsPage.xaml.cs">
+      <DependentUpon>GenericReportsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListOfProductsServicesPage.xaml.cs">
+      <DependentUpon>ListOfProductsServicesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\ListOfPropertiesPage.xaml.cs">
+      <DependentUpon>ListOfPropertiesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NewOrderPage.xaml.cs">
+      <DependentUpon>NewOrderPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\NavigationService.cs" />
-    <Compile Include="ViewModels\ClienteViewModel.cs" />
-    <Compile Include="ViewModels\LavadorViewModel.cs" />
+    <Compile Include="Models\ClientModel.cs" />
+    <Compile Include="ViewModels\ClientViewModel.cs" />
+    <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="ViewModels\EmployeeViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="ViewModels\MenuItemViewModel.cs" />
-    <Compile Include="ViewModels\ProductoViewModel.cs" />
-    <Compile Include="ViewModels\ServicioViewModel.cs" />
-    <Compile Include="ViewModels\VehiculoViewModel.cs" />
+    <Compile Include="Models\ProductServiceModel.cs" />
+    <Compile Include="Models\OrderModel.cs" />
+    <Compile Include="Models\PropertyModel.cs" />
+    <Compile Include="ViewModels\ProductServiceViewModel.cs" />
+    <Compile Include="ViewModels\PropertyViewModel.cs" />
+    <Compile Include="ViewModels\OrderViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="GettingStarted.Xamarin" />
@@ -152,55 +169,79 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\ClientesPage.xaml">
+    <EmbeddedResource Include="Pages\ListOfClientsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\VehiculosPage.xaml">
+    <EmbeddedResource Include="Pages\ListOfPropertiesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\LavadoresPage.xaml">
+    <EmbeddedResource Include="Pages\ListOfEmployeesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\GastosIngresosPage.xaml">
+    <EmbeddedResource Include="Pages\GenericIncomeExpenses.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\ReportesPage.xaml">
+    <EmbeddedResource Include="Pages\GenericReportsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\NuevoServicioPage.xaml">
+    <EmbeddedResource Include="Pages\NewProductServicePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\NuevoClientePage.xaml">
+    <EmbeddedResource Include="Pages\NewClientPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\ServiciosPage.xaml">
+    <EmbeddedResource Include="Pages\ListOfProductsServicesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Pages\ConfiguracionPage.xaml">
+    <EmbeddedResource Include="Pages\GenericConfigurationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\NewPropertyPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\NewEmployeePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\ListOfOrdersPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Pages\NewOrderPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

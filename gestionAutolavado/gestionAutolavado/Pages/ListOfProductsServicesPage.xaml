@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="gestionAutolavado.Pages.ClientesPage"
-             Title="Clientes"
+             x:Class="gestionAutolavado.Pages.ListOfProductsServicesPage"
+             Title="Servicios"
              BackgroundColor="{StaticResource BackgroundColor1}"
-             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+             BindingContext="{Binding ProductService, Source={StaticResource Locator}}">
   <ContentPage.ToolbarItems>
-    <ToolbarItem Icon="agregar.png" Command="{Binding GoToCommand}" CommandParameter="NuevoClientePage"/>
+    <ToolbarItem Icon="agregar.png" Command="{Binding GoToCommand}" CommandParameter="NewProductService"/>
   </ContentPage.ToolbarItems>
   <ListView
-    ItemsSource="{Binding Servicios}"
+    ItemsSource="{Binding ProductsServices}"
     HasUnevenRows="True">
     <ListView.ItemTemplate>
       <DataTemplate>
@@ -28,36 +28,28 @@
               <Label
                 FontAttributes="Bold"
                 VerticalOptions="Center"
+                TextColor="{StaticResource MainColor}"
+                Text="{Binding IdProductService}"/>
+              <Label
+                VerticalOptions="Center"
                 TextColor="{StaticResource FontColor}"
-                Text="{Binding IdServicio}"/>
+                Text="{Binding CreationDate, StringFormat='{0:dd/mm/yyyy HH:mm}'}"/>
               <Label
                 VerticalOptions="Center"
                 TextColor="{StaticResource FontColor}"
-                Text="{Binding FechaRegistro, StringFormat='{0:dd/mm/yyyy HH:mm}'}"/>
+                Text="{Binding Name}"/>
               <Label
                 VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
-                Text="{Binding IdCliente}"/>
+                TextColor="{StaticResource FontColor}"
+                Text="{Binding Description}"/>
               <Label
                 VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
-                Text="{Binding IdVehiculo}"/>
+                TextColor="{StaticResource FontColor}"
+                Text="{Binding Price}"/>
               <Label
                 VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
-                Text="{Binding IdProducto}"/>
-              <Label
-                VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
-                Text="{Binding IdLavador}"/>
-              <Label
-                VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
-                Text="{Binding Precio}"/>
-              <Label
-                VerticalOptions="Center"
-                TextColor="{StaticResource MainColor}"
-                Text="{Binding Comentarios}"/>
+                TextColor="{StaticResource FontColor}"
+                Text="{Binding Favorite}"/>
             </StackLayout>
           </Grid>
         </ViewCell>

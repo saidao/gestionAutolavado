@@ -4,35 +4,50 @@ namespace gestionAutolavado.Services
 {
     public class NavigationService
     {
-        public  void Navigate( string PageName)
+        public async void Navigate(string PageName)
         {
             App.Master.IsPresented = false;
 
             switch (PageName)
             {
-                case "ConfiguracionPage":
-                    App.Navigator.PushAsync(new ConfiguracionPage());
+                case "GenericConfigurationPage":
+                    await App.Navigator.PushAsync(new GenericConfigurationPage());
                     break;
-                case "ServiciosPageServiciosPage":
-                    App.Navigator.PushAsync(new ServiciosPage());
+                case "GenericIncomeExpenses":
+                    await App.Navigator.PushAsync(new GenericIncomeExpenses());
                     break;
-                case "ClientesPage":
-                    App.Navigator.PushAsync(new ClientesPage());
+                case "GenericReportsPage":
+                    await App.Navigator.PushAsync(new GenericReportsPage());
                     break;
-                case "VehiculosPage":
-                    App.Navigator.PushAsync(new VehiculosPage());
+                case "ListOfClientsPage":
+                    await App.Navigator.PushAsync(new ListOfClientsPage());
                     break;
-                case "LavadoresPage":
-                    App.Navigator.PushAsync(new LavadoresPage());
+                case "ListOfEmployeesPage":
+                    await App.Navigator.PushAsync(new ListOfEmployeesPage());
                     break;
-                case "GastosIngresoPage":
-                    App.Navigator.PushAsync(new GastosIngresoPage());
+                case "ListOfOrdersPage":
+                    await App.Navigator.PushAsync(new ListOfOrdersPage());
                     break;
-                case "ReportesPage":
-                    App.Navigator.PushAsync(new ReportesPage());
+                case "ListOfProductsServicesPage":
+                    await App.Navigator.PushAsync(new ListOfProductsServicesPage());
                     break;
-                case "NuevoServicioPage":
-                    App.Navigator.PushAsync(new NuevoServicioPage());
+                case "ListOfPropertiesPage":
+                    await App.Navigator.PushAsync(new ListOfPropertiesPage());
+                    break;
+                case "NewClientPage":
+                    await App.Navigator.PushAsync(new NewClientPage());
+                    break;
+                case "NewEmployeePage":
+                    await App.Navigator.PushAsync(new NewEmployeePage());
+                    break;
+                case "NewOrderPage":
+                    await App.Navigator.PushAsync(new NewOrderPage());
+                    break;
+                case "NewProductServicePage":
+                    await App.Navigator.PushAsync(new NewPropertyPage());
+                    break;
+                case "NewPropertyPage":
+                    App.Navigator.PushAsync(new NewPropertyPage());
                     break;
                 case "MainPage":
                     App.Navigator.PopToRootAsync();

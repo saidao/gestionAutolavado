@@ -1,24 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="gestionAutolavado.Pages.MainPage"
-             Title="Información del día"
-             BackgroundColor="{StaticResource BackgroundColor1}">
-  <Label Text="Pagina principal" VerticalOptions="Center" HorizontalOptions="Center" />
-</ContentPage>
-
-<!--?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="gestionAutolavado.Pages.MainPage"
-             Title="Información del día"
+             x:Class="gestionAutolavado.Pages.ListOfClientsPage"
+             Title="Clientes"
              BackgroundColor="{StaticResource BackgroundColor1}"
-             BindingContext="{Binding Sale, Source={StaticResource Locator}}">
+             BindingContext="{Binding Client, Source={StaticResource Locator}}">
   <ContentPage.ToolbarItems>
-    <ToolbarItem Icon="agregar.png" Command="{Binding GoToCommand}" CommandParameter="NewSalePage"/>
+    <ToolbarItem Icon="agregar.png" Command="{Binding GoToCommand}" CommandParameter="NewClientPage"/>
   </ContentPage.ToolbarItems>
   <ListView
-    ItemsSource="{Binding Sales}"
+    ItemsSource="{Binding Clients}"
     HasUnevenRows="True">
     <ListView.ItemTemplate>
       <DataTemplate>
@@ -38,24 +29,24 @@
                 FontAttributes="Bold"
                 VerticalOptions="Center"
                 TextColor="{StaticResource MainColor}"
-                Text="{Binding IdSale}"/>
+                Text="{Binding IdClient}"/>
+              <Label
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                TextColor="{StaticResource FontColor}"
+                Text="{Binding FullName}"/>
               <Label
                 VerticalOptions="Center"
                 TextColor="{StaticResource FontColor}"
                 Text="{Binding CreationDate, StringFormat='{0:dd/mm/yyyy HH:mm}'}"/>
               <Label
-                FontAttributes="Bold"
                 VerticalOptions="Center"
                 TextColor="{StaticResource FontColor}"
-                Text="{Binding Price}"/>
-              <Label
-                VerticalOptions="Center"
-                TextColor="{StaticResource FontColor}"
-                Text="{Binding Comment}"/>
+                Text="{Binding Email}"/>
             </StackLayout>
           </Grid>
         </ViewCell>
       </DataTemplate>
     </ListView.ItemTemplate>
   </ListView>
-</ContentPage>-->
+</ContentPage>
