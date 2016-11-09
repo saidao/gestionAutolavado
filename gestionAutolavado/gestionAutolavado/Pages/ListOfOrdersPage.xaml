@@ -4,12 +4,12 @@
              x:Class="gestionAutolavado.Pages.ListOfOrdersPage"
              Title="Ventas realizadas"
              BackgroundColor="{StaticResource BackgroundColor1}"
-             BindingContext="{Binding Sale, Source={StaticResource Locator}}">
+             BindingContext="{Binding Order, Source={StaticResource Locator}}">
   <ContentPage.ToolbarItems>
     <ToolbarItem Icon="agregar.png" Command="{Binding GoToCommand}" CommandParameter="NewOrderPage"/>
   </ContentPage.ToolbarItems>
   <ListView
-    ItemsSource="{Binding Sales}"
+    ItemsSource="{Binding Orders}"
     HasUnevenRows="True">
     <ListView.ItemTemplate>
       <DataTemplate>

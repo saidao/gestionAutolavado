@@ -12,7 +12,8 @@ namespace gestionAutolavado
         public App()
         {
             InitializeComponent();
-            MainPage = new Pages.MasterPage();
+            //MainPage = new Pages.MasterPage();
+            MainPage = new WelcomePage();
         }
 
         protected override void OnStart()

@@ -27,6 +27,8 @@ namespace gestionAutolavado.Models
         public string LastName { get; set; }
         [Indexed]
         public string FullName { get { return string.Format("{0} {1}", this.Names, this.LastName); } }
+        [Indexed, MaxLength(100)]
+        public string Alias { get; set; }
         [Indexed, MaxLength(250)]
         public string Email { get; set; }
         [MaxLength(50)]
@@ -43,6 +45,6 @@ namespace gestionAutolavado.Models
         public List<OrderModel> Orders { get; set; }
 
         //Return parameters
-        public override string ToString() { return string.Format("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9}", this.IdEmployee, this.CreationDate, this.CreatedBy, this.ModificationDate, this.ModifiedBy, this.FullName, this.Email, this.HomePhone, this.CellPhone, this.Address); }
+        public override string ToString() { return string.Format("{0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10}", this.IdEmployee, this.CreationDate, this.CreatedBy, this.ModificationDate, this.ModifiedBy, this.FullName, this.Alias, this.Email, this.HomePhone, this.CellPhone, this.Address); }
     }
 }

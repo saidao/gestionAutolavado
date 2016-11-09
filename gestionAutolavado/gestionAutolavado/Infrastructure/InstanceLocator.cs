@@ -9,7 +9,7 @@ namespace gestionAutolavado.Infrastructure
         public EmployeeViewModel Employee { get; set; }
         public ProductServiceViewModel ProductService { get; set; }
         public PropertyViewModel Property { get; set; }
-        public OrderViewModel Orders { get; set; }
+        public OrderViewModel Order { get; set; }
 
         public InstanceLocator()
         {
@@ -18,7 +18,7 @@ namespace gestionAutolavado.Infrastructure
             Employee = new EmployeeViewModel();
             ProductService = new ProductServiceViewModel();
             Property = new PropertyViewModel();
-            Orders = new OrderViewModel();
+            Order = new OrderViewModel();
         }
     }
 }

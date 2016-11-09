@@ -5,7 +5,7 @@
              x:Class="gestionAutolavado.App">
   <Application.Resources>
     <ResourceDictionary>
-      <!-- General colors "DSPIP Blue",-->
+      <!-- General colors "blue-green",-->
       <Color x:Key="MainColor">#A1D700</Color><!--0C304A -->
       <Color x:Key="FontColor">#186D94</Color><!--85A71E -->
       <Color x:Key="AccentColor1">#3488AD</Color><!--BFD841 -->
@@ -14,11 +14,28 @@
       <Color x:Key="BackgroundColor2">#F3F4F1</Color><!--F3F4F1 -->
       
       <!-- Menu colors -->
-      <Color x:Key="MenuColor">#3399CC</Color><!-- #BFD841 -->
-      <Color x:Key="MenuFontColor">#FFFFFF</Color><!--#FFFFFF -->
-      
+      <Color x:Key="MenuBackGroudColor">#FFFFFF</Color><!-- #BFD841 -->
+      <Color x:Key="MenuFontColor">#000000</Color>
+      <Color x:Key="MenuLineColor">#0FFA07</Color>
+      <!--Color x:Key="MenuFontSize">11</Color>
+      <Color x:Key="MenuFont">Aril Narrow</Color-->
+
       <!-- Locator -->
       <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
+
+      <!-- Fonts -->
+      <OnPlatform x:Key="GeneralButtonFont" x:TypeArguments="Font" iOS="12" Android="14" WinPhone="16"/>
+
+      <!-- Styles -->
+      <Style x:Key="GeneralButton" TargetType="Button">
+        <Setter Property="Font" Value="{StaticResource GeneralButtonFont}"/>
+        <Setter Property="BorderRadius" Value="25"/>
+        <Setter Property="HeightRequest" Value="50"/>
+        <Setter Property="BackgroundColor" Value="{StaticResource AccentColor1}"/>
+        <Setter Property="TextColor" Value="{StaticResource MenuFontColor}"/>
+        <Setter Property="HorizontalOptions" Value="FillAndExpand"/>
+        <Setter Property="VerticalOptions" Value="Center"/>
+      </Style>
     </ResourceDictionary>
   </Application.Resources>
 </Application>

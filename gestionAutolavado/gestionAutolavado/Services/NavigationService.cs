@@ -1,4 +1,5 @@
-﻿using gestionAutolavado.Pages;
+﻿using System;
+using gestionAutolavado.Pages;
 
 namespace gestionAutolavado.Services
 {
@@ -47,15 +48,19 @@ namespace gestionAutolavado.Services
                     await App.Navigator.PushAsync(new NewPropertyPage());
                     break;
                 case "NewPropertyPage":
-                    App.Navigator.PushAsync(new NewPropertyPage());
+                    await App.Navigator.PushAsync(new NewPropertyPage());
                     break;
                 case "MainPage":
-                    App.Navigator.PopToRootAsync();
+                    await App.Navigator.PopToRootAsync();
                     break;
                 default:
                     break;
             }
         }
 
+        internal void SetMainPage()
+        {
+            App.Current.MainPage = new MasterPage();
+        }
     }
 }

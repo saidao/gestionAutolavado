@@ -51,7 +51,7 @@ namespace gestionAutolavado.ViewModels
                     ModifiedBy = "Admin",
                     Plate = "AAA-1234",
                     Color = "red",
-                    Type = "Auto"
+                    Type = TypeCar.Coche
                 });
             }
         }

@@ -25,7 +25,6 @@ namespace gestionAutolavado.WinPhone
         public MainPage()
         {
             this.InitializeComponent();
-
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
             LoadApplication(new gestionAutolavado.App());

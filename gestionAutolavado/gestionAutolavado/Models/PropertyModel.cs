@@ -26,7 +26,7 @@ namespace gestionAutolavado.Models
         [Indexed, MaxLength(20)]
         public string Color { get; set; }
         [Indexed, MaxLength(20)]
-        public string Type { get; set; }
+        public TypeCar Type { get; set; }
 
         //Relationship parameters
         [ForeignKey(typeof(ClientModel))]
@@ -38,5 +38,16 @@ namespace gestionAutolavado.Models
 
         //Return parameters
         public override string ToString() { return string.Format("{0} {1} {2} {3} {4} {5} {6} {7} {8}", this.IdProperty, this.CreationDate, this.CreatedBy, this.ModificationDate, this.ModifiedBy, this.IdClient, this.Plate, this.Color, this.Type); }
+    }
+
+    //Specific Class
+    //Object: Tipo
+    public enum TypeCar
+    {
+        Coche,
+        CamionetaChica,
+        CamionetaMediana,
+        CamionetaGrande,
+        ServicioPúblico
     }
 }
